@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="root" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" prefHeight="800" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom,#0f172a,#111827);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs333.GameController">
+
+    <children>
+        <Pane fx:id="gamePane" prefHeight="800" prefWidth="600">
+            <Rectangle fx:id="player" arcHeight="8" arcWidth="8" fill="#3b82f6" height="14" layoutX="270" layoutY="740" width="60" />
+         <opaqueInsets>
+            <Insets top="1.0" />
+         </opaqueInsets>
+        </Pane>
+
+        <HBox layoutX="16" layoutY="16" spacing="16">
+            <children>
+                <Label style="-fx-text-fill:#e5e7eb;-fx-font-size:16;" text="Score:" />
+                <Label fx:id="scoreLabel" style="-fx-text-fill:white;-fx-font-size:16;-fx-font-weight:bold;" text="0" />
+            </children>
+        </HBox>
+
+        <VBox fx:id="overlay" alignment="CENTER" prefHeight="800" prefWidth="600" spacing="10" visible="false">
+            <children>
+                <Label style="-fx-text-fill:white;-fx-font-size:36;-fx-font-weight:bold;" text="Game Over" />
+                <Label fx:id="finalScoreLabel" style="-fx-text-fill:#e5e7eb;-fx-font-size:18;" />
+                <Label style="-fx-text-fill:#9ca3af;-fx-font-size:14;" text="Press R to restart" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
